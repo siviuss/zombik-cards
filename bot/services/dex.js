@@ -69,21 +69,17 @@ let normalised;
 function chooseCard(feed, goldenBean, userCards) {
 	for (let i = 0; i < 10; i++) {
 		// Get group matching chosen rarity
-		let groupIndex = 0;
+		let groupIndex;
 		let acc = 0;
-		let r = Math.random();
-		if (feed) {
-			r = r ** 0.4;
-		}
-
-		for (let i = 0; i < normalised.length; i++) {
+		const r = Math.random();
+		for (const i in normalised) {
 			acc += normalised[i];
 			if (r < acc) {
-				groupIndex = i;
+				groupIndex = Number(i);
 				break;
 			}
 		}
-		let group = groups[groupIndex];
+		const group = groups[groupIndex];
 		if (goldenBean) {
 			group = group.filter(k => !userCards.includes(k.id));
 		}
