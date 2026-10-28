@@ -19,7 +19,6 @@ bot.start();
 
 // command handling
 bot.on("message", async (message) => {
-	console.log(message);
 	if (message.from.id == 777000) return;
 	if (message.from.is_bot) return; // group anonymous bot or something else
 	if (message.text == null) return;
