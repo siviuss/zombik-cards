@@ -12,7 +12,7 @@ import { onCallbackQuery, bindCallbackQuery } from '@bot/events/CallbackQuery.js
 const commands = await loadCommands();
 
 const bot = new TelegramBot({
-	token: config.telegram.token
+	token: process.env.TOKEN
 });
 bot.start();
 

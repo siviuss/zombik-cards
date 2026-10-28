@@ -1,0 +1,10 @@
+# database connection configuration
+database:
+  hostname: localhost
+  port: 5432
+  adapter: postgres
+  database: zombick
+  username: zombick
+  password: "zombick123"
+
+chat: -1003966916553
